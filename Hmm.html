@@ -30,6 +30,22 @@
       body {
         overflow: hidden;
       }
+      @media screen and (max-width: 600px) {
+        p {
+          font-size: 25px; /* Adjust the font size for better readability on small screens */
+        }
+
+        p > a:first-of-type {
+          font-size: 28px; /* Slightly reduce the size of the "Happy Birthday Nur" text for better fit */
+        }
+
+        /* Center the text horizontally and vertically */
+        p {
+          text-align: center;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
     </style>
   </head>
   <body>
