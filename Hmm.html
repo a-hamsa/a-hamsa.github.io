@@ -2,7 +2,6 @@
   <head>
     <title>Nurrrr</title>
 
-    
     <style>
       canvas {
         position: absolute;
@@ -32,15 +31,21 @@
         overflow: hidden;
       }
     </style>
-    
   </head>
   <body>
     <canvas id="c"></canvas>
 
-    <audio controls autoplay preload="auto" style="display:none">
-      <source src="/tes.mp3" type="audio/mpeg">
+    <audio id="my_audio" muted>
+      <source src="/tes.mp3" type="audio/mpeg" />
     </audio>
     <script>
+      var audio = document.getElementById("my_audio");
+
+      // Add an event listener to unmute and play the audio when the user interacts with the page
+      document.addEventListener("click", function () {
+        audio.muted = false;
+        audio.play();
+      });
       var w = (c.width = window.innerWidth),
         h = (c.height = window.innerHeight),
         ctx = c.getContext("2d"),
